@@ -1,38 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 15% 10%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 268 50% 25%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 268 50% 25%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 268 50% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 100% 60%;
+    --secondary-foreground: 268 50% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 268 30% 40%;
+    --muted-foreground: 0 0% 80%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 340 90% 70%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 268 50% 40%;
+    --input: 268 50% 30%;
+    --ring: 268 50% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -97,5 +99,29 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Press Start 2P", monospace;
+    image-rendering: pixelated;
+  }
+
+  .pixel-text {
+    font-family: "Press Start 2P", monospace;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8);
+  }
+
+  .game-button {
+    border: 4px solid #000;
+    box-shadow:
+      0 6px 0 #000,
+      inset 0 -4px 0 rgba(0, 0, 0, 0.3);
+    transition:
+      transform 0.1s,
+      box-shadow 0.1s;
+  }
+
+  .game-button:active {
+    transform: translateY(4px);
+    box-shadow:
+      0 2px 0 #000,
+      inset 0 -2px 0 rgba(0, 0, 0, 0.3);
   }
 }
